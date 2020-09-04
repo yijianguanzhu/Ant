@@ -1,0 +1,23 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  simple:
+    format: "%(asctime)s  [%(module)s %(lineno)d行] %(levelname)s:  %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+#  file:
+#    class: logging.handlers.TimedRotatingFileHandler
+#    filename: info.log
+#    level: DEBUG
+#    formatter: simple
+#    encoding: UTF-8
+#    when: D
+#    interval: 1
+#    backupCount: 30
+root:
+  level: DEBUG
+  handlers: [console]
